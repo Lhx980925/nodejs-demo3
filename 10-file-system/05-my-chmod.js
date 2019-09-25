@@ -10,7 +10,7 @@ if(process.argv.length!=4){
 }
 
 try{
-  fs.chmodSync(src,mod);
+  fs.chmodSync(src,parseInt(mod,8));
 }catch(err){
   console.error(err.message);
   process.exit(2);
